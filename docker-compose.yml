@@ -1,0 +1,22 @@
+neo4j:
+  build: .
+  dockerfile: docker/neo4j/Dockerfile
+  ports:
+    - 7473:7473
+    - 7474:7474
+    - 7687:7687
+  environment:
+    NEO4J_USER: neo4j
+    NEO4J_PASSWORD: password
+
+moviesapi:
+  build: .
+  dockerfile: docker/moviesapi/Dockerfile
+  command: bash -c "go run src/moviesapi/main.go"
+  ports:
+    - 8080:8080
+  environment:
+    PORT: 8080
+  links:
+    - neo4j
+
