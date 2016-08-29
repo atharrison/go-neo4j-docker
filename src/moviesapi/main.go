@@ -47,7 +47,7 @@ type Link struct {
 }
 
 var (
-	neo4jURL = "http://localhost:7474"
+	neo4jURL = os.Getenv("NEO4J_ENDPOINT")
 )
 
 func defaultHandler(w http.ResponseWriter, req *http.Request) {

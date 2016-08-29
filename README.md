@@ -10,8 +10,33 @@ https://neo4j.com/developer/example-project/
 https://neo4j.com/developer/docker/
 
 
-## Data
+## Quick Start
 
-To have a local store outside the docker container, create a place locally to mount a volume.
+Clone the app
 
-    mkdir -p $HOME/neo4j/data
+    cd <your-workspace-root>
+    git clone git@github.com:atharrison/go-neo4j-docker.git
+
+Build the app
+
+    cd go-neo4j-docker
+    docker-compose build
+    
+    
+Start the containers
+
+    docker-compose up
+    
+Populate the Movies DB
+
+* Visit [http://localhost:7474/browser/](http://localhost:7474/browser/)
+* When prompted for user/pass, use the default of neo4j/neo4j
+* It will ask you to enter a new password. Enter `password`
+* In the prompt, type `:play movies`, then press enter
+* Click the output of that result, then hit the "play" icon in the top-right to execute
+
+Browse the Movies app
+
+* Visit http://localhost:8080/
+* Enter a search criteria in the box, and hit 'Search'
+
