@@ -3,11 +3,11 @@ Sample App to demonstrate Go using Neo4J in docker
 
 ## Links
 
-https://neo4j.com/developer/go/
-https://github.com/neo4j-examples/movies-go-cq
-https://github.com/go-cq/cq
-https://neo4j.com/developer/example-project/
-https://neo4j.com/developer/docker/
+* [https://neo4j.com/developer/go/](https://neo4j.com/developer/go/)
+* [https://github.com/neo4j-examples/movies-go-cq](https://github.com/neo4j-examples/movies-go-cq)
+* [https://github.com/go-cq/cq](https://github.com/go-cq/cq)
+* [https://neo4j.com/developer/example-project/](https://neo4j.com/developer/example-project/)
+* [https://neo4j.com/developer/docker/](https://neo4j.com/developer/docker/)
 
 
 ## Quick Start
