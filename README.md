@@ -16,12 +16,21 @@ Clone the app
 
     cd <your-workspace-root>
     git clone git@github.com:atharrison/go-neo4j-docker.git
+    
+Get the Go dependencies
+
+    cd go-neo4j-docker
+    export GOPATH=<your-workspace-root>/go-neo4j-docker
+    cut -d' ' -f3 dependencies.txt | xargs -n1 -pI package go get package
+    
+    # Hit 'y' and enter if prompted
+    > go get github.com/daaku/go.httpgzip?...y
+    > go get github.com/jmoiron/sqlx?...y
+    > go get gopkg.in/cq.v1?...y
 
 Build the app
 
-    cd go-neo4j-docker
     docker-compose build
-    
     
 Start the containers
 
@@ -37,6 +46,6 @@ Populate the Movies DB
 
 Browse the Movies app
 
-* Visit http://localhost:8080/
+* Visit [http://localhost:8080/](http://localhost:8080/)
 * Enter a search criteria in the box, and hit 'Search'
 
